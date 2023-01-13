@@ -1,11 +1,12 @@
 <% layout ('/layouts/boilerplate') %>
 
-
-
     <div class="container">
-<br>
+    <br>
+
+    <div class="row">
+        <div class="col">
         <h4>
-            <%= site.site_name %>
+           <strong> <%= site.site_name %></strong>
         </h4>
         <div class="container text-left">
            
@@ -14,8 +15,7 @@
                     <%= site.author.job_position%> (<%= site.author.affiliation%>)</span></em>
         </div>
 
-        <div class="row">
-            <div class="col">
+       
                 <div>
                     <ul>
                         <br>
@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="col">
-                <div id='map' style='width: 500px; height: 160px;'></div>
+                <div id='map' style='width: 300px; height: 215px;'></div>
             </div>
         </div>
 
