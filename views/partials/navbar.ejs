@@ -14,7 +14,7 @@
 
                 <a class="nav-link" href="/sites">Sites</a>
 
-                <a class="nav-link" href="/products">Cycle count reports</a>
+                <a class="nav-link" href="/products">Cycle counts</a>
 
             </div>
             <div class="navbar-nav" style="margin-left:auto">
@@ -23,14 +23,12 @@
                     <a class="nav-link" href="/login">Login</a>
                     <a class="nav-link" href="/register">Register</a>
                 <%} else {%>
-                    <p style="margin-top:0.3em"><span style="color:rgb(242, 111, 5)">Logged in as: <%=currentUser.username.toUpperCase()%> - <%=currentUser.job_position %></span></p>
+                    <p style="margin-top:0.4em"><span style="color:rgb(242, 111, 5)">Logged in as: <%=currentUser.username.toUpperCase()%> - <%=currentUser.job_position %></span></p>
                     <a class="nav-link" href="/logout">Logout</a>
                 <% }%>
           
                 
-                 <% if(currentUser && currentUser.isAdmin){ %>   
-                    <p style="margin-top:0.3em"><span style="color:rgb(242, 111, 5)">(Admin)</span></p>
-                <% } %>
+               
             
             
             
