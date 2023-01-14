@@ -20,7 +20,7 @@ const productSchema = new Schema({
     cat: {
         type: String,
         uppercase: true,
-        enum: ['PENTA', 'PNEUMONIAE', 'BCG','POLIO', 'MEASLES', 'COVID-19', 'INFLUENZA', 'HPV', 'HEPATITIS-B', 'JE', 'MENINGITIS', 'ROTAVIRUS','YELLOW FEVER','RABIES','EBOLA','DILUENTS']
+        enum: ['PENTA', 'PNEUMONIAE', 'BCG','POLIO', 'MEASLES', 'COVID-19', 'INFLUENZA', 'HPV', 'HEPATITIS-B', 'JE', 'MENINGITIS', 'ROTAVIRUS','YELLOWFEVER','RABIES','EBOLA','DILUENTS']
     },
     date_open: {
         type: Date
