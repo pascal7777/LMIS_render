@@ -19,7 +19,8 @@ new mapboxgl.Marker()
     .setPopup(
     new mapboxgl.Popup({ offset: 25 })
     .setHTML(
-        `<h5>${site.site_name}</h5><p>${site.sc_level}</p>`
+        `<h5>${site.site_name}</h5>
+        <p>SC level: ${site.sc_level} - Nr Stock Reports submitted: ${site.products.length}</p>`
     )
 )
 .addTo(map)
