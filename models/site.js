@@ -82,7 +82,7 @@ siteSchema.post('findOneAndDelete', async function (site) {
 siteSchema.virtual('properties.popUpMarkup').get(function () {
     return `
     <strong><a href="/sites/${this._id}">${this.site_name}</a></strong>
-    <p>${this.sc_level}</p>`
+    <p>SC Level: ${this.sc_level} - Stock Reports: ${this.products.length}</p>`
 });
 
 
