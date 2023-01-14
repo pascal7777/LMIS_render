@@ -2,27 +2,27 @@
 
     <div class="container">
 
-        <div class="container d-flex justify-content-center align-items-center mt-5"> <h1>
+        <div class="container d-flex justify-content-center align-items-center mt-5"> 
+            <h3>
             Stock Report
-        </h1> </div>
-
-        <em> Stock Report Created at: <%=product.createdAt.toDateString()%> (<%= moment(product.createdAt).fromNow() %>
-                    )
+        </h3>
+    </div>
+        <em> Stock Report Created at: <%=product.createdAt.toDateString()%> (<%= moment(product.createdAt).fromNow() %>)
                     <br>Stock Report (last) Updated/Commented at: <%=product.updatedAt.toDateString()%> (<%=
                             moment(product.updatedAt).fromNow() %>)
-                            <br>
-                            by: <%= product.author.username%> - <%= product.author.job_position%><br></em>
-        <br>
+                            by: <%= product.author.username%> - <%= product.author.job_position%></em>
+                        
+        
         <hr style=" width:100%; height: 10px; border: 0; box-shadow: 0 10px 10px -10px rgb(51, 51, 52) inset;">
         <div class="table-responsive">
 
 
             <div class="card">
-                <h5 class="card-header">
+                <h4 class="card-header">
                     <a href="/sites/<%= product.site._id %>">
                         <%= product.site.site_name%>
                     </a>
-                </h5>
+                </h4>
                 <div class="card-body">
                     <h5 class="card-title">
                         <div class="row">
@@ -35,7 +35,7 @@
                         </div>
                     </h5>
                     <h6 class="card-text"><em>Review Period (Nr Days): <%=((product.createdAt-
-                            product.date_open)/86400000).toFixed(0) %></em>R
+                            product.date_open)/86400000).toFixed(0) %></em>
                     </h6>
                 </div>
 
@@ -44,6 +44,7 @@
 
                         <tr>
                             <th scope="col">Product</th>
+                            <th scope="col">Manufacturer</th>
                             <th scope="col">Type Stock</th>
                             <th scope="col">Opening Stock <p class="fs-6, fw-lighter" style="margin-bottom :0em">
                                     <%=product.date_open.toDateString()%>
@@ -68,6 +69,9 @@
                                 <span style="color:rgb(22, 119, 254)">
                                     <%= product.name %> - <%= product.conversion%> dose/vial
                                 </span>
+                            </td>
+                            <td>
+                                <%=product.manufacturer%>
                             </td>
                             <td>
                                 <%=product.type%>
@@ -147,7 +151,7 @@
                     </tbody>
                 </table>
             </div>
-            <h6> <span style="color:rgb(196, 192, 192)">Note: quantities received and issued as 'dose' will be
+           <span style="color:rgb(196, 192, 192)">Note: quantities received and issued as 'dose' will be
                     converted to
                     'vials' in the table to generate the correct reconciliation. <em>Issued</em> at PR, SN and LD
                     level in
@@ -156,9 +160,10 @@
                     level <em>issued</em> per definition means actually used for vaccinations. However even at PR,
                     SN or LD
                     level limited quantities can be used to vaccinate children.
-                </span></h6>
-            <br>
-            <h3>Supporting Documentation Uploaded</h3>
+                </span>
+            
+                <br><br>
+            <h4>Supporting Documentation Uploaded</h4>
 
 
             <div class="row">

@@ -8,29 +8,39 @@
         <br>
 
             <div class="d-flex bd-highlight">
-                <div class="p-2 flex-grow-1 bd-highlight"><h6>
+                <div class="p-2 flex-grow-1 bd-highlight"><h5>
                     Cycle Counts (<%=products.length%>)
-                    </h6></div>
+                    </h5></div>
 
-                    <div class="p-2 bd-highlight">
+                    <div class="p-2 flex-grow-1 bd-highlight">
                         <div class="dropdown">
-                            <button class="btn btn-warning btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-warning btn-md dropdown-toggle" style="padding-bottom: 8px; padding-left: 8px; padding-right: 45px" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                              Filter
                             </button>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="./products?cat=PENTA" role="button">Penta </a></li>
                               <li><a class="dropdown-item" href="./products?cat=PNEUMONIAE" role="button">Pneumoniae</a></li>
                               <li><a class="dropdown-item" href="./products?cat=POLIO" role="button">Polio</a></li>
+                              <li><a class="dropdown-item" href="./products?cat=BCG" role="button">BCG</a></li>
                               <li><a class="dropdown-item" href="./products?cat=MEASLES" role="button">Measles</a></li>
+                              <li><a class="dropdown-item" href="./products?cat=INFLUENZA" role="button">Influenza</a></li>
                               <li><a class="dropdown-item" href="./products?cat=COVID-19" role="button">Covid</a></li>
+                              <li><a class="dropdown-item" href="./products?cat=HPV" role="button">HPV</a></li>
+                              <li><a class="dropdown-item" href="./products?cat=HEPATITIS-B" role="button">HepB</a></li>
+                              <li><a class="dropdown-item" href="./products?cat=MENINGITIS" role="button">Meningitis</a></li>
+                              <li><a class="dropdown-item" href="./products?cat=ROTAVIRUS" role="button">Rotavirus</a></li>
+                              <li><a class="dropdown-item" href="./products?cat=YELLOW FEVER" role="button">Yellow Fever</a></li>
+                              <li><a class="dropdown-item" href="./products?cat=JE" role="button">Japanese Encephalitis</a></li>
+                              <li><a class="dropdown-item" href="./products?cat=RABIES" role="button">Rabies</a></li>
+                              <li><a class="dropdown-item" href="./products?cat=EBOLA" role="button">Ebola</a></li>
                               <li><a class="dropdown-item" href="./products?cat=DILUENTS" role="button">Diluents</a></li>
                               <li><a class="dropdown-item" href="#">....</a></li>
                             </ul>
                           </div>
                     </div>
 
-                <div class="p-2 bd-highlight"><input type=" text" id="myInput3" onkeyup="myFunction()"
-                    style="width:8em; padding: 2px 2px 6px 2px" placeholder="Search Site Name ..."></div>
+                <div class="p-2 flex-grow-1 bd-highlight"><input type=" text" id="myInput3" onkeyup="myFunction()"
+                    style="width:15em; padding: 3px 4px 10px 12px" placeholder="Search Site Name ..."></div>
 </div>
 
         <div class="table-responsive">
@@ -43,6 +53,9 @@
                             <th onclick="sortTable(1)">
                             Vaccine
                             </th>
+                            <th>
+                                Intended for:
+                                </th>
                             <th>
                             From
                             </th>
@@ -58,7 +71,8 @@
                             <th>
                             Months of Stock
                             <th>
-                            Stock out days
+                            Stock out days  
+                            <!-- (if high like > 3 days it should be accounted for in MoS calcul) -->
                             </th>
                             <th>
                             Near Expiry Risk
@@ -79,7 +93,9 @@
                                 <td>
                                     <%= product.name %>
                                 </td>
-                            
+                                <td>
+                                    <%= product.type %>
+                                </td>
                                 <td>
                                     <%=(product.date_open.getMonth()+1)%>/<%=product.date_open.getFullYear()%>
                                 </td>
@@ -159,6 +175,7 @@
                     </tbody>
                     <% }%>
                 </table>
+                <br>
 
                <em><span style="color:rgb(196, 192, 192)">Site name links to submitted stock reports
                             for that site in the year. Stock reconciliation links to the specific stock report details.
@@ -175,7 +192,7 @@
         </div>
         <br>
 </div>
-        <br>
+        
 
 
 

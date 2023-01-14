@@ -5,12 +5,12 @@
 
         <div class="container d-flex justify-content-center align-items-center mt-5">
 
-          <h1>New Stock Report</h1>  
+          <h4>New Stock Report</h4>  
         
         </div>
         
         <div class="container d-flex justify-content-center align-items-center">
-    <h2><span style="color:rgb(242, 111, 5)"><%=site.site_name%></span></h2></div>
+    <h4><span style="color:rgb(242, 111, 5)"><%=site.site_name%></span></h4></div>
    
         <p class="fs-6; fw-lighter" style="margin-top:1em">The review period is defined by the date of last stock
             count to the date for a next stockcount (today).
@@ -32,23 +32,259 @@
                         <option value="PENTA">
                         <option value="PNEUMONIAE">
                         <option value="POLIO">
+                            <option value="BCG">
                         <option value="MEASLES">
+                            <option value="INFLUENZA">
                         <option value="COVID-19">
+                        <option value="HPV">  
+                            <option value="HEPATITIS-B">  
+                                <option value="MENINGITIS">  
+                                    <option value="ROTAVIRUS">  
+                                        <option value="RABIES">  
+                                            <option value="EBOLA">  
+                                        <option value="YELLOW FEVER">  
+                                <option value="JE">  
                         <option value="DILUENTS">
                     </datalist>
+                   
                     <br>
+
                     <label class="form-label" for="name" class="form-label">Vaccine</label>
                     <input class="form-control" list="vaccines" name="name" id="name" placeholder="Type to search..."
                         required>
                     <datalist id="vaccines">
-                        <option value="penta">
-                        <option value="pcv">
-                        <option value="ipv">
-                        <option value="mr">
-                        <option value="pfizer">
-                        <option value="covishield">
-                        <option value="moderna bivalent"></option>
-                        <option value="diluent">
+                        <option value="BCG - Ampoule (BCG Freeze Dried Glutamate vaccine)">
+                            <option value="BCG - Ampoule (BCG Vaccine)">
+                            <option value="BCG - Two vial set (active + excipient) (BCG Vaccine AJV)">
+                            <option value="BCG - Vial (BCG Vaccine)">
+                            <option value="cholera: inactivated oral - Plastic Tube (Euvichol-Plus)">
+                            <option value="cholera: inactivated oral - Vial (Euvichol)">
+                            <option value="cholera: inactivated oral - Vial (Shanchol)">
+                            <option value="cholera: inactivated oral - Vial + Buffer Sachet (Dukoral)">
+                            <option value="Dengue Tetravalent (live, attenuated) - Two vial set (active + excipient) (Dengvaxia)">
+                            <option value="Diphtheria-Tetanus - Ampoule (Diphtheria and Tetanus Vaccine Adsorbed (Paediatric))">
+                            <option value="Diphtheria-Tetanus - Vial (Adsorbed DT Vaccine)">
+                            <option value="Diphtheria-Tetanus - Vial (Diftet)">
+                            <option value="Diphtheria-Tetanus - Vial (Diphtheria and Tetanus Vaccine Adsorbed (Pediatric))">
+                            <option value="Diphtheria-Tetanus (reduced antigen content) - Ampoule (Diphtheria and Tetanus Vaccine Adsorbed for Adults and Adolescents)">
+                            <option value="Diphtheria-Tetanus (reduced antigen content) - Vial (Diphtheria and Tetanus Vaccine Adsorbed for Adults and Adolescents)">
+                            <option value="Diphtheria-Tetanus (reduced antigen content) - Vial (IMOVAX dT adult)">
+                            <option value="Diphtheria-Tetanus (reduced antigen content) - Vial (None used on labelling for supply through UN agencies.     Also marketed with labelled commercial name  BE Td)">
+                            <option value="Diphtheria-Tetanus (reduced antigen content) - Vial (none)">
+                            <option value="Diphtheria-Tetanus (reduced antigen content) - Vial (Tetadif)">
+                            <option value="Diphtheria-Tetanus-Pertussis (acellular) - Vial (Adacel)">
+                            <option value="Diphtheria-Tetanus-Pertussis (acellular) - Vial (Boostrix)">
+                            <option value="Diphtheria-Tetanus-Pertussis (acellular)-Hepatitis B-Haemophilus influenzae type b-Polio (Inactivated) - Vial (Hexaxim)">
+                            <option value="Diphtheria-Tetanus-Pertussis (whole cell) - Ampoule (Diphtheria-Tetanus-Pertussis Vaccine Adsorbed)">
+                            <option value="Diphtheria-Tetanus-Pertussis (whole cell) - Vial (Diphtheria-Tetanus-Pertussis Vaccine Adsorbed)">
+                            <option value="Diphtheria-Tetanus-Pertussis (whole cell) - Vial (DTP Vaccine)">
+                            <option value="Diphtheria-Tetanus-Pertussis (whole cell) - Vial (None used on labelling for supply through UN agencies.     Also marketed with labelled commercial name  TRIPVAC)">
+                            <option value="Diphtheria-Tetanus-Pertussis (whole cell)-Haemophilus influenzae type b - Vial + Ampoule (Diphtheria, Tetanus, Pertussis and Haemophilus influenzae type b Conjugate Vaccine)">
+                            <option value="Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B - Ampoule (Diphtheria ,Tetanus, Pertussis and Hepatitis B Vaccine Adsorbed)">
+                            <option value="Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B - Vial (Diphtheria ,Tetanus, Pertussis and Hepatitis B Vaccine Adsorbed)">
+                            <option value="Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b - Two vial set (active + active) (None used on labelling for supply through UN agencies.     Also marketed with labelled commercial name  ComBE Five (Reconstituted).)">
+                            <option value="Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b - Vial (Diphtheria, Tetanus, Pertussis, Hepatitis B and Haemophilus influenzae type b Conjugate Vaccine Adsorbed)">
+                            <option value="Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b - Vial (Easyfive-TT)">
+                            <option value="Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b - Vial (Eupenta)">
+                            <option value="Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b - Vial (None used on labelling for supply through UN agencies.     Also marketed with labelled commercial name  ComBE Five (Liquid).)">
+                            <option value="Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b - Vial (Pentabio)">
+                            <option value="Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b - Vial (Shan-5)">
+                            <option value="Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b - Vial + Ampoule (Diphtheria, Tetanus, Pertussis, Hepatitis B and Haemophilus influenzae type b Conjugate Vaccine)">
+                            <option value="Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b-Polio (Inactivated) - Vial (Shan6™)">
+                            <option value="Ebola vaccine (Ad26.ZEBOV-GP [recombinant]) - Vial (Zabdeno)">
+                            <option value="Ebola vaccine (MVA-BN-Filo [recombinant]) - Vial (Mvabea)">
+                            <option value="Ebola Zaire (rVSV∆G-ZEBOV-GP, live attenuated) - Vial (ERVEBO)">
+                            <option value="Haemophilus influenzae type b - Vial (Act-HIB)">
+                            <option value="Haemophilus influenzae type b - Vial (Haemophilus influenzae type b Conjugate Vaccine)">
+                            <option value="Haemophilus influenzae type b - Vial (Quimi-Hib)">
+                            <option value="Hepatitis A (Human Diploid Cell), Inactivated (Adult) - Vial (Havrix 1440 Adult)">
+                            <option value="Hepatitis A (Human Diploid Cell), Inactivated (Adult) - Vial (HEALIVE)">
+                            <option value="Hepatitis A (Human Diploid Cell), Inactivated (Paediatric) - Vial (Havrix 720 Junior)">
+                            <option value="Hepatitis A (Human Diploid Cell), Inactivated (Paediatric) - Vial (HEALIVE)">
+                            <option value="Hepatitis B - Ampoule or Vial (Hepatitis B Vaccine (rDNA) (Adult))">
+                            <option value="Hepatitis B - Ampoule or Vial (Hepatitis B Vaccine (rDNA) (Paedriatic))">
+                            <option value="Hepatitis B - Vial (Engerix)">
+                            <option value="Hepatitis B - Vial (Euvax B)">
+                            <option value="Hepatitis B - Vial (Heberbiovac HB)">
+                            <option value="Hepatitis B - Vial (Hepatitis B Vaccine (rDNA) (Adult))">
+                            <option value="Hepatitis B - Vial (Hepatitis B Vaccine (rDNA) (Paediatric))">
+                            <option value="Hepatitis B (Paediatric) - Vial (Euvax B)">
+                            <option value="Human Papillomavirus (Bivalent) - Vial (Cecolin®)">
+                            <option value="Human Papillomavirus (Bivalent) - Vial (Cervarix)">
+                            <option value="Human Papillomavirus (Ninevalent) - Vial (Gardasil 9)">
+                            <option value="Human Papillomavirus (Quadrivalent) - Vial (Gardasil)">
+                            <option value="Influenza, Pandemic (H1N1) - Sprayer (Influenza A (H1N1) 2009 monovalent vaccine)">
+                            <option value="Influenza, Pandemic (H1N1) - Vial (Celtura)">
+                            <option value="Influenza, Pandemic (H1N1) - Vial (Fluvirin-H1N1)">
+                            <option value="Influenza, Pandemic (H1N1) - Vial (Focetria)">
+                            <option value="Influenza, Pandemic (H1N1) - Vial (Green Flu-S)">
+                            <option value="Influenza, Pandemic (H1N1) - Vial (Influenza A (H1N1) 2009 monovalent vaccine)">
+                            <option value="Influenza, Pandemic (H1N1) - Vial (Panenza)">
+                            <option value="Influenza, Pandemic (H1N1) - Vial (Panvax)">
+                            <option value="Influenza, Pandemic (H1N1) - Vial + Ampoule (NASOVAC Influenza Vaccine, Live Attenuated (Human) Freeze-Dried)">
+                            <option value="Influenza, Pandemic (H5N1) - Sprayer (Pandemic Live Attenuated Vaccine)">
+                            <option value="Influenza, seasonal (Quadrivalent) - Vial (Afluria® Quadrivalent)">
+                            <option value="Influenza, seasonal (Quadrivalent) - Vial (Fluzone Quadrivalent (labelled as FluQuadri in other markets))">
+                            <option value="Influenza, seasonal (Quadrivalent) - Vial (GCFLU Quadrivalent inj.)">
+                            <option value="Influenza, seasonal (Quadrivalent) - Vial (GCFLU Quadrivalent Multi inj.)">
+                            <option value="Influenza, seasonal (Quadrivalent) - Vial (SKYCellflu Quadrivalent inj.)">
+                            <option value="Influenza, seasonal (Quadrivalent) - Vial (SKYCellflu Quadrivalent Multi inj.)">
+                            <option value="Influenza, seasonal (Quadrivalent) - Vial (VaxigripTetra)">
+                            <option value="Influenza, seasonal (Trivalent) - Vial (Afluria®)">
+                            <option value="Influenza, seasonal (Trivalent) - Vial (AGRIFLU)">
+                            <option value="Influenza, seasonal (Trivalent) - Vial (Fluvirin)">
+                            <option value="Influenza, seasonal (Trivalent) - Vial (Fluzone)">
+                            <option value="Influenza, seasonal (Trivalent) - Vial (GC FLU  inj)">
+                            <option value="Influenza, seasonal (Trivalent) - Vial (GC FLU Multi inj.)">
+                            <option value="Influenza, seasonal (Trivalent) - Vial (IL-YANG FLU Vaccine INJ.)">
+                            <option value="Influenza, seasonal (Trivalent) - Vial (influenza trivalent vaccine (split virion, inactivated))">
+                            <option value="Influenza, seasonal (Trivalent) - Vial (Influenza Vaccine (Split virion, inactivated))">
+                            <option value="Influenza, seasonal (Trivalent) - Vial (Serinflu)">
+                            <option value="Influenza, seasonal (Trivalent) - Vial (SKYCellflu® inj.)">
+                            <option value="Influenza, seasonal (Trivalent) - Vial (SKYCellflu® Multi inj.)">
+                            <option value="Influenza, seasonal (Trivalent) - Vial (Vaxigrip)">
+                            <option value="Influenza, seasonal (Trivalent) - Vial + Ampoule (Nasovac-S Influenza Vaccine, Live, Attenuated (Human))">
+                            <option value="Japanese Encephalitis Vaccine (Inactivated) (3µg Pediatric) - Vial (JEEV® (3µg))">
+                            <option value="Japanese Encephalitis Vaccine (Inactivated) 6µg - Vial (JEEV® (6µg))">
+                            <option value="Japanese Encephalitis Vaccine (live, attenuated) - Two vial set (active + excipient) (IMOJEV MD)">
+                            <option value="Japanese Encephalitis Vaccine (live, attenuated) - Two vial set (active + excipient) (Japanese Encephalitis Vaccine Live (SA14-14-2))">
+                            <option value="Measles - Vial (Measles Vaccine, Live, Attenuated)">
+                            <option value="Measles - Vial (Measles vaccine)">
+                            <option value="Measles - Vial + Ampoule (Measles vaccine)">
+                            <option value="Measles and Rubella - Vial (Measles and Rubella Vaccine, Live, Attenuated)">
+                            <option value="Measles and Rubella - Vial + Ampoule (Measles and Rubella Vaccine (Live) (Attenuated, Freeze Dried))">
+                            <option value="Measles, Mumps and Rubella - Vial (Measles, Mumps and Rubella Vaccine, Live, Attenuated)">
+                            <option value="Measles, Mumps and Rubella - Vial (Priorix)">
+                            <option value="Measles, Mumps and Rubella - Vial (rHA M-M-R II)">
+                            <option value="Meningococcal A Conjugate 10 µg - Vial + Ampoule (Meningococcal A Conjugate MenAfriVac)">
+                            <option value="Meningococcal A Conjugate 5 µg - Vial + Ampoule (Meningococcal A Conjugate 5 micrograms MenAfriVac 5µg)">
+                            <option value="Meningococcal ACYW-135 (conjugate vaccine) - Two vial set (active + active) (Menveo)">
+                            <option value="Meningococcal ACYW-135 (conjugate vaccine) - Vial (Menactra)">
+                            <option value="Meningococcal ACYW-135 (conjugate vaccine) - Vial + Ampoule (Nimenrix)">
+                            <option value="Meningococcal ACYW-135 Tetanus Toxoid (conjugate vaccine) - Vial (MenQuadfi)">
+                            <option value="Plasmodium falciparum (Malaria) and Hepatitis B (recombinant, adjuvanted) - Two vial set (active + active) (Mosquirix)">
+                            <option value="Pneumococcal (conjugate) - Vial (PNEUMOSIL®)">
+                            <option value="Pneumococcal (conjugate) - Vial (Prevenar 13 Multidose Vial)">
+                            <option value="Pneumococcal (conjugate) - Vial (Prevenar 13)">
+                            <option value="Pneumococcal (conjugate) - Vial (Synflorix)">
+                            <option value="Polio Vaccine - Inactivated (IPV) - Vial (IMOVAX POLIO)">
+                            <option value="Polio Vaccine - Inactivated (IPV) - Vial (IPV Vaccine SSI)">
+                            <option value="Polio Vaccine - Inactivated (IPV) - Vial (Picovax)">
+                            <option value="Polio Vaccine - Inactivated (IPV) - Vial (Poliomyelitis Vaccine (Inactivated))">
+                            <option value="Polio Vaccine - Inactivated (IPV) - Vial (Poliomyelitis vaccine multidose, suspension for injection 2.5 mL)">
+                            <option value="Polio Vaccine - Inactivated (IPV) - Vial (Poliomyelitis vaccine)">
+                            <option value="Polio Vaccine - Inactivated (IPV) - Vial (Poliorix)">
+                            <option value="Polio Vaccine - Inactivated (IPV) - Vial (ShanIPV™)">
+                            <option value="Polio Vaccine - Inactivated Sabin (sIPV) - Vial (Eupolio Inj.)">
+                            <option value="Polio Vaccine - Inactivated Sabin (sIPV) - Vial (Poliomyelitis Vaccine (Vero Cell), Inactivated, Sabin Strains)">
+                            <option value="Polio Vaccine - Oral (OPV) Bivalent Types 1 and 3 - Vial (BIOPOLIO B1/3)">
+                            <option value="Polio Vaccine - Oral (OPV) Bivalent Types 1 and 3 - Vial (Bivalent OPV Type 1 and 3 Poliomyelitis Vaccine, Live (Oral))">
+                            <option value="Polio Vaccine - Oral (OPV) Bivalent Types 1 and 3 - Vial (Bivalent Oral Poliomyelitis Vaccine Type 1&3 (bOPV 1&3))">
+                            <option value="Polio Vaccine - Oral (OPV) Bivalent Types 1 and 3 - Vial (Bivalent type 1&3 Oral Poliomyelitis vaccine, IP (bOPV1&3))">
+                            <option value="Polio Vaccine - Oral (OPV) Bivalent Types 1 and 3 - Vial (none)">
+                            <option value="Polio Vaccine - Oral (OPV) Bivalent Types 1 and 3 - Vial (Polio Sabin One and Three)">
+                            <option value="Polio Vaccine - Oral (OPV) Bivalent Types 1 and 3 - Vial (Poliomyelitis Vaccine (live, oral attenuated, human Diploid Cell), type 1 and 3)">
+                            <option value="Polio Vaccine - Oral (OPV) Bivalent Types 1 and 3 - Vial (Poliomyelitis Vaccine (Oral), Bivalent types 1 and 3)">
+                            <option value="Polio Vaccine - Oral (OPV) Monovalent Type 1 - Vial (Monovalent Oral Poliomyelitis Vaccine Type 1 (mOPV1))">
+                            <option value="Polio Vaccine - Oral (OPV) Monovalent Type 1 - Vial (Monovalent type 1 Oral Poliomyelitis vaccine, IP (mOPV1))">
+                            <option value="Polio Vaccine - Oral (OPV) Monovalent Type 1 - Vial (ORAL MONOVALENT TYPE 1 POLIOMYELITIS VACCINE)">
+                            <option value="Polio Vaccine - Oral (OPV) Monovalent Type 1 - Vial (Polio Sabin Mono T1)">
+                            <option value="Polio Vaccine - Oral (OPV) Monovalent Type 2 - Vial (Monovalent Oral Poliomyelitis Vaccine Type 2)">
+                            <option value="Polio Vaccine - Oral (OPV) Monovalent Type 2 - Vial (ORAL MONOVALENT TYPE 2 POLIOMYELITIS VACCINE (mOPV2))">
+                            <option value="Polio Vaccine - Oral (OPV) Monovalent Type 2 - Vial (Polio Sabin Mono Two (oral))">
+                            <option value="Polio Vaccine - Oral (OPV) Monovalent Type 3 - Vial (ORAL MONOVALENT TYPE 3 POLIOMYELITIS VACCINE)">
+                            <option value="Polio Vaccine - Oral (OPV) Monovalent Type 3 - Vial (Polio Sabin Mono Three (oral))">
+                            <option value="Polio Vaccine - Oral (OPV) Trivalent - Vial (BIOPOLIO)">
+                            <option value="Polio Vaccine - Oral (OPV) Trivalent - Vial (OPVERO)">
+                            <option value="Polio Vaccine - Oral (OPV) Trivalent - Vial (Oral Poliomyelitis Vaccines (Oral Drops))">
+                            <option value="Polio Vaccine - Oral (OPV) Trivalent - Vial (Polioviral vaccine)">
+                            <option value="Rabies - Vial (Rabipur)">
+                            <option value="Rabies - Vial (VaxiRab N)">
+                            <option value="Rabies - Vial (VERORAB)">
+                            <option value="Rabies - Vial + Ampoule (Rabies Vaccine Inactivated (Freeze Dried)(RABIVAX-S))">
+                            <option value="Rotavirus  - Applicator (Rotarix)">
+                            <option value="Rotavirus  - Plastic Tube (Rotarix)">
+                            <option value="Rotavirus  - Plastic Tube (Rotateq)">
+                            <option value="Rotavirus (live, attenuated) - Plastic Tube (ROTASIIL-Liquid)">
+                            <option value="Rotavirus (live, attenuated) - Two vial set (active + excipient) (ROTASIIL)">
+                            <option value="Rotavirus (live, attenuated) - Two vial set (active + excipient) (ROTASIIL®Thermo)">
+                            <option value="Rotavirus (live, attenuated) - Vial (ROTASIIL-Liquid)">
+                            <option value="Rotavirus (live, attenuated) - Vial (ROTAVAC 5D®)">
+                            <option value="Rotavirus (live, attenuated) - Vial (Rotavac)">
+                            <option value="Rubella - Vial (Rubella Vaccine, Live, Attenuated)">
+                            <option value="Tetanus Toxoid - Ampoule (Tetanus  Toxoid Vaccine Adsorbed)">
+                            <option value="Tetanus Toxoid - Uniject (TT vaccine)">
+                            <option value="Tetanus Toxoid - Vial (None used on labelling for supply through UN agencies.     Also marketed with labelled commercial name  BEtt.)">
+                            <option value="Tetanus Toxoid - Vial (ShanTT)">
+                            <option value="Tetanus Toxoid - Vial (Tetanus  Toxoid Vaccine Adsorbed)">
+                            <option value="Tetanus Toxoid - Vial (Tetatox)">
+                            <option value="Tetanus Toxoid - Vial (TETAVAX)">
+                            <option value="Tetanus Toxoid - Vial (TT vaccine)">
+                            <option value="Typhoid (Conjugate) - Vial (Typbar-TCV)">
+                            <option value="Typhoid (Conjugate) - Vial (TYPHIBEV®)">
+                            <option value="Typhoid (Polysaccharide) - Vial (TYPHIM Vi)">
+                            <option value="Varicella - Two vial set (active + excipient) (SKYVaricella Inj.)">
+                            <option value="Varicella - Two vial set (active + excipient) (Varivax)">
+                            <option value="Varicella - Vial (Varicella Vaccine, Live)">
+                            <option value="Yellow Fever - Ampoule (n/a)">
+                            <option value="Yellow Fever - Two vial set (active + excipient) (Yellow Fever)">
+                            <option value="Yellow Fever - Vial (SinSaVac™)">
+                            <option value="Yellow Fever - Vial (Stabilized Yellow Fever Vaccine)">
+                            <option value="Yellow Fever - Vial (STAMARIL)">
+                    </datalist>
+                
+                <br>
+
+                    <label class="form-label" for="manufacturer" class="form-label">Manufacturer</label>
+                    <input class="form-control" list="manufacturers" name="manufacturer" id="manufacturer" placeholder="Type to search..."
+                        required>
+                    <datalist id="manufacturers">
+                        <option value="Abbott Biologicals BV">
+                            <option value="AJ Vaccines A/S">
+                            <option value="AstraZeneca Pharmaceuticals LP.">
+                            <option value="BB- NCIPD Ltd. (Bul Bio-National Center of Infectious and Parasitic Diseases Ltd.)">
+                            <option value="Beijing Institute of Biological Products Co., Ltd.">
+                            <option value="Bharat Biotech International Limited">
+                            <option value="Bilthoven Biologicals B.V.">
+                            <option value="Bio-Manguinhos/Fiocruz">
+                            <option value="Biological E. Limited">
+                            <option value="Cadila Health Care Ltd">
+                            <option value="Centro de Ingenieria Genetica y Biotecnologia">
+                            <option value="Chengdu Institute of Biological Products Co.,Ltd">
+                            <option value="Chiron Behring Vaccines Private Ltd.">
+                            <option value="EuBiologics Co., Ltd.">
+                            <option value="Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences">
+                            <option value="GC Biopharma Corp.">
+                            <option value="GlaxoSmithKline Biologicals SA">
+                            <option value="GlaxoSmithKline Vaccines S.r.l.">
+                            <option value="GPO-MBP Co., Ltd.">
+                            <option value="Haffkine Bio Pharmaceutical Corporation Ltd">
+                            <option value="Hualan Biological Bacterin Inc.">
+                            <option value="IL-YANG PHARMACEUTICAL CO., LTD.">
+                            <option value="Institut Pasteur de Dakar">
+                            <option value="Instituto Butantan">
+                            <option value="Janssen Vaccines, Branch of Cilag GmbH International ">
+                            <option value="Japan BCG Laboratory">
+                            <option value="LG Chem Ltd">
+                            <option value="MedImmune">
+                            <option value="Merck Vaccines">
+                            <option value="Panacea Biotec Ltd.">
+                            <option value="Pfizer Europe MA EEIG">
+                            <option value="PT Bio Farma (Persero)">
+                            <option value="Sanofi Healthcare India Private Limited">
+                            <option value="Sanofi Pasteur Inc.">
+                            <option value="Sanofi Pasteur Limited">
+                            <option value="Sanofi Pasteur SA">
+                            <option value="Sanofi Pasteur">
+                            <option value="Seqirus GmbH">
+                            <option value="Seqirus Limited">
+                            <option value="Seqirus Vaccines Limited">
+                            <option value="Serum Institute of India Pvt. Ltd.">
+                            <option value="Sinovac (Dalian) Vaccine Technology Co., Ltd.">
+                            <option value="Sinovac Biotech Co. Ltd">
+                            <option value="SK Bioscience Co., Ltd.">
+                            <option value="Valneva Sweden AB">
+                            <option value="Xiamen Innovax Biotech Co. Ltd.">
                     </datalist>
                 </div>
 
@@ -59,8 +295,8 @@
                     <datalist id="types">
                         <option value="ROUTINE">
                         <option value="CAMPAIGN">
-                        <option value="COVID-19">
-                        <option value="OTHER">
+                        <option value="OUTBREAK">
+                        <option value="PILOT">
                     </datalist>
 <br>
                     <label class="form-label" for="conversion" class="form-label">Conversion (dose/vial)</label>
@@ -265,7 +501,7 @@
             height: 2px;
             background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));">
             <br>
-
+            <br>
             <div class="d-grid gap-2 col-6 mx-auto">
             <button class="btn btn-success">Submit</button>
             <p><em>(note that submit may take some seconds depending on the nr images to upload)</em></p></div>
