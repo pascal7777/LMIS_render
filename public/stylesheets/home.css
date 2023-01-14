@@ -1,7 +1,7 @@
 body {
     height: 100vh; font-family: "fangsong";
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('/images/homepage.png') ;
+    url('/images/homepage.jpeg') ;
     background-size: cover;
     background-position: center;
     text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
@@ -9,7 +9,10 @@ body {
 }
 
 .intro{
-    font-size: 1.1em;
+    font-size: 1.5em;
+}
+.nav{
+    font-size: 1em;
 }
 
 .cover-container {
