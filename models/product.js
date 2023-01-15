@@ -20,7 +20,7 @@ const productSchema = new Schema({
     cat: {
         type: String,
         uppercase: true,
-        enum: ['PENTA', 'PNEUMONIAE', 'BCG','POLIO', 'MEASLES', 'COVID-19', 'INFLUENZA', 'HPV', 'HEPATITIS-B', 'JE', 'MENINGITIS', 'ROTAVIRUS','YELLOWFEVER','RABIES','EBOLA','TYPHOID','TETANUS','DILUENTS']
+        enum: ['PENTA', 'PNEUMONIAE', 'BCG','POLIO', 'MEASLES', 'COVID-19', 'INFLUENZA', 'HPV', 'HEPATITIS-B', 'JE', 'MENINGITIS', 'ROTAVIRUS','YELLOWFEVER','RABIES','EBOLA','TYPHOID','TETANUS', 'CHOLERA','DILUENTS']
     },
     date_open: {
         type: Date
@@ -39,31 +39,32 @@ const productSchema = new Schema({
     uom_open: {
         type: String,
         lowercase: true,
-        default: 'vial'
+        enum: ['vial/amp','dose','flacon/tube', 'sprayer']
     },
     uom_received: {
         type: String,
         lowercase: true,
-        default: 'vial'
+        enum: ['vial/amp','dose','flacon/tube', 'sprayer']
     },
     uom_issued: {
         type: String,
-        lowercase: true
+        lowercase: true,
+        enum: ['vial/amp','dose','flacon/tube', 'sprayer']
     },
     uom_lost: {
         type: String,
         lowercase: true,
-        default: 'vial'
+        enum: ['vial/amp','dose','flacon/tube', 'sprayer']
     },
     uom_transferred: {
         type: String,
         lowercase: true,
-        default: 'vial'
+        enum: ['vial/amp','dose','flacon/tube', 'sprayer']
     },
     uom_count: {
         type: String,
         lowercase: true,
-        default: 'vial'
+        enum: ['vial/amp','dose','flacon/tube', 'sprayer']
     },
     qty_open: {
         type: Number,
@@ -89,6 +90,10 @@ const productSchema = new Schema({
     qty_count: {
         type: Number,
         min: 0
+    },
+    cce: {
+        type: String,
+        enum: ['refrigerator','freezer', 'ultrafreezer']
     },
     so_days: {
         type: Number,
