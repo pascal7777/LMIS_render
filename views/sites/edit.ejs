@@ -110,14 +110,41 @@
                     <input class="form-control" name="children_store" id="children_store" type="number" 
                         value="<%=site.children_store%>" required>
                 <br>
-                    <label class="form-label" for="children_facility" class="form-label">Nr of Dependent Health Faclities</label>
+                    <label class="form-label" for="children_facility" class="form-label">Nr of Dependent Health Facilities</label>
                     <input class="form-control" name="children_facility" id="children_facility" type="number" 
                         value="<%=site.children_facility%>" required>
                 </div>
-
-
             </div>
        
+            <br> <br>
+            <div class="row">
+                <br>
+                <hr style=" border: 0;
+                height: 2px;
+                background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));">
+              <div class="col-md-6 offset-md-3">
+                    <label class="form-label" for="catchment" class="form-label">Catchment Population</label>
+                    <input class="form-control" name="catchment" id="catchment" type="number"
+                        value="<%=site.catchment%>">
+                        <br>
+                    <label class="form-label" for="pregnancies" class="form-label"># Pregnancies (last year)</label>
+                    <input class="form-control" name="pregnancies" id="pregnancies" type="number" 
+                        value="<%=site.pregnancies%>">
+                        <br>
+                    <label class="form-label" for="newborns" class="form-label"># Newborns (last year)</label>
+                    <input class="form-control" name="newborns" id="newborns" type="number" 
+                        value="<%=site.newborns%>">
+                        <br>
+                    <label class="form-label" for="survInf" class="form-label"># Surviving Infants who received two WHO-recommended vaccines (3rd dose of DTP and 1st dose of measles) (last year)</label>
+                    <input class="form-control" name="survInf" id="survInf" type="number" 
+                        value="<%=site.survInf%>">
+                        <br>
+                    <label class="form-label" for="epiTarget" class="form-label">Monthtly EPI Target routine (this year)</label>
+                    <input class="form-control" name="epiTarget" id="epiTarget" type="number" 
+                        value="<%=site.epiTarget%>">
+                </div>
+            </div>
+
 
             <br>
             <hr style=" border: 0;
