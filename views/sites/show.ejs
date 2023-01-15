@@ -476,7 +476,7 @@
                                             <% if (product.date_open.getMonth()===2) {%>
                                                 <% if (product.cat==="BCG" ) {%>
                                                     <div><span style="color:orange">Recon: </span><br>
-                                                        <% if (product.uom_received==="vvial/amp" &&
+                                                        <% if (product.uom_received==="vial/amp" &&
                                                             product.uom_issued==="vial/amp" ) {%>
                                                             <%=((product.qty_count / (
                                                                 product.qty_open+product.qty_received-product.qty_issued-product.qty_lost+product.qty_transferred
