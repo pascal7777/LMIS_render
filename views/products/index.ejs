@@ -139,7 +139,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <% if (product.uom_issued==="vial/amp" ) {%>
+                                    <% if (product.uom_issued==="vial/amp" || product.uom_received==="flacon/tube") {%>
                                         <%=((product.qty_count)
                                             /(product.qty_issued)*(((product.createdAt-product.date_open)/86400000)/30)).toFixed(1)
                                             %>
