@@ -19,6 +19,7 @@
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="./products?cat=BCG" role="button">BCG</a></li>
+                                <li><a class="dropdown-item" href="./products?cat=CHOLERA" role="button">Cholera</a></li>
                                 <li><a class="dropdown-item" href="./products?cat=COVID-19" role="button">Covid</a></li>
                                 <li><a class="dropdown-item" href="./products?cat=EBOLA" role="button">Ebola</a></li>
                                 <li><a class="dropdown-item" href="./products?cat=HEPATITIS-B" role="button">HepB</a></li>
@@ -72,6 +73,10 @@
                             </th>
                             <th>
                             Months of Stock
+                            </tr>
+                            <th>
+                            Storage temperature:
+                            </tr>
                             <th>
                             Stock out days  
                             <!-- (if high like > 3 days it should be accounted for in MoS calcul) -->
@@ -145,6 +150,10 @@
                                                         /(product.qty_issued/product.conversion))*(((product.createdAt-product.date_open)/86400000)/30)).toFixed(1)
                                                         %>
                                                         <% } %>
+                                </td>
+
+                                <td>
+                                    <%=product.cce %> 
                                 </td>
                                 <td>
                                     <%=product.so_days %> ( <%=(product.so_days

@@ -14,7 +14,8 @@
                     <label for="cat">Category</label>
                     <select name="cat" id="cat">
                         <option value="BCG" <%=product.cat==='BCG' ? 'selected' : '' %>>BCG</option>
-                        <option value="COVID-19" <%=product.cat==='COVID-19' ? 'selected' : '' %>>Covid-19</option>
+                        <option value="CHOLERA" <%=product.cat==='CHOLERA' ? 'selected' : '' %>>Cholera</option>
+                        <option value="COVID-19" <%=product.cat==='COVID-19' ? 'selected' : '' %>>Covid-19</option>                      
                         <option value="EBOLA" <%=product.cat==='EBOLA' ? 'selected' : '' %>>Ebola</option>
                         <option value="HEPATITIS-B" <%=product.cat==='HEPATITIS-B' ? 'selected' : '' %>>Hep B</option>
                         <option value="HPV" <%=product.cat==='HPV' ? 'selected' : '' %>>HPV</option>
@@ -326,14 +327,15 @@
 
             <div class="row">
                 <div class="col-md-3 offset-md-2">
-                    <label for="qty_open">Qty last stock count (vials)</label>
+                    <label for="qty_open">Qty last stock count (vials/flacons)</label>
                     <input type="number" id="qty_open" name="qty_open" value="<%=product.qty_open%>">
                 </div>
                 <div class="col-md-3 offset-md-2">
-                    <!-- <label for="uom_open">UoM</label>
+                    <label for="uom_open">UoM</label>
                     <select name="uom_open" id="uom_open">
-                        <option selected>Vial</option>
-                    </select> -->
+                        <option value="vial/amp" <%=product.uom_open==='vial/amp' ? 'selected' : '' %>>Vial/Amp</option>
+                        <option value= "flacon/tube" <%=product.uom_open==='flacon/tube' ? 'selected' : '' %>>Flacon/Tube</option>
+                    </select>
                 </div>
             </div>
             <br>
@@ -350,7 +352,8 @@
                 <div class="col-md-3 offset-md-2">
                     <label for="uom_received">UoM</label>
                     <select name="uom_received" id="uom_received">
-                        <option value="vial" <%=product.uom_received==='vial' ? 'selected' : '' %>>Vial</option>
+                        <option value="vial/amp" <%=product.uom_received==='vial/amp' ? 'selected' : '' %>>Vial/Amp</option>
+                        <option value= "flacon/tube" <%=product.uom_received==='flacon/tube' ? 'selected' : '' %>>Flacon/Tube</option>
                         <option value="dose" <%=product.uom_received==='dose' ? 'selected' : '' %>>Dose</option>
                     </select>
                 </div>
@@ -364,7 +367,8 @@
                 <div class="col-md-3 offset-md-2">
                     <label for="uom_issued">UoM</label>
                     <select name="uom_issued" id="uom_issued" <select name="uom_issued" id="uom_issued">
-                        <option value="vial" <%=product.uom_issued==='vial' ? 'selected' : '' %>>Vial</option>
+                        <option value="vial/amp" <%=product.uom_issued==='vial/amp' ? 'selected' : '' %>>Vial/Amp</option>
+                        <option value= "flacon/tube" <%=product.uom_issued==='flacon/tube' ? 'selected' : '' %>>Flacon/Tube</option>
                         <option value="dose" <%=product.uom_issued==='dose' ? 'selected' : '' %>>Dose</option>
                     </select>
                 </div>
@@ -372,41 +376,52 @@
             <br>
             <div class="row">
                 <div class="col-md-3 offset-md-2">
-                    <label for="qty_lost">Losses (since last stock count in vials)</label>
+                    <label for="qty_lost">Losses (since last stock count in vials/flacons)</label>
                     <input type="number" id="qty_lost" name="qty_lost" value="<%=product.qty_lost%>">
                 </div>
                 <div class="col-md-3 offset-md-2">
-                    <!-- <label for="uom_lost">UoM</label>
+                    <label for="uom_lost">UoM</label>
                     <select name="uom_lost" id="uom_lost">
-                        <option selected>Vial</option>
-                    </select> -->
+                        <option value="vial/amp" <%=product.uom_lost==='vial/amp' ? 'selected' : '' %>>Vial/Amp</option>
+                        <option value= "flacon/tube" <%=product.uom_lost==='flacon/tube' ? 'selected' : '' %>>Flacon/Tube</option>
+                    </select>
                 </div>
             </div>
             <br>
             <div class="row">
                 <div class="col-md-3 offset-md-2">
-                    <label for="qty_transferred">Transferred (+/- since last stock count in vials)</label>
+                    <label for="qty_transferred">Transferred (+/- since last stock count in vials/flacons)</label>
                     <input type="number" id="qty_transferred" name="qty_transferred"
                         value="<%=product.qty_transferred%>">
                 </div>
                 <div class="col-md-3 offset-md-2">
-                    <!-- <label for="uom_transferred">UoM</label>
+                    <label for="uom_transferred">UoM</label>
                     <select name="uom_transferred" id="uom_transferred">
-                        <option selected>Vial</option>
-                    </select> -->
+                        <option value="vial/amp" <%=product.uom_transferred==='vial/amp' ? 'selected' : '' %>>Vial/Amp</option>
+                        <option value= "flacon/tube" <%=product.uom_transferred==='flacon/tube' ? 'selected' : '' %>>Flacon/Tube</option>
+                    </select>
                 </div>
             </div>
             <br>
             <div class="row">
                 <div class="col-md-3 offset-md-2">
-                    <label for="qty_count">Stock Count (today, in vials)</label>
+                    <label for="qty_count">Stock Count (today, in vials/flacons)</label>
                     <input type="number" id="qty_count" name="qty_count" value="<%=product.qty_count%>">
                 </div>
                 <div class="col-md-3 offset-md-2">
-                    <!-- <label for="uom_count">UoM</label>
+                    <label for="uom_count">UoM</label>
                     <select name="uom_count" id="uom_count">
-                        <option selected>Vial</option>
-                    </select> -->
+                        <option value="vial/amp" <%=product.uom_count==='vial/amp' ? 'selected' : '' %>>Vial/Amp</option>
+                        <option value= "flacon/tube" <%=product.uom_count==='flacon/tube' ? 'selected' : '' %>>Flacon/Tube</option>
+                    </select>
+                </div>
+                <div class="col-md-3 offset-md-2">
+                    <label for="cce">CCE/label>
+                    <select name="cce" id="cce">
+                        <option value= "refrigerator" <%=product.cce==='refrigerator' ? 'selected' : '' %>>Refrigerator</option>
+                        <option value= "freezer" <%=product.cce==='freezer' ? 'selected' : '' %>>Freezer</option>
+                        <option value= "ultrafreezer" <%=product.cce==='ultrafreezer' ? 'selected' : '' %>>Ultra-Freezer</option>
+                    </select>
                 </div>
             </div>
             <br>
@@ -421,7 +436,7 @@
                 </div>
               
                 <div class="col-md-3 offset-md-2">
-                    <label for="nearexp">Nr Vials Near Expiration</label>
+                    <label for="nearexp">Nr Vials Near Expiration or damaged/exposed</label>
                     <input type="number" id="nearexp" name="nearexp" value="<%=product.nearexp%>">
                 </div>
 
