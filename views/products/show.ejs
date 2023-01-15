@@ -3,9 +3,9 @@
     <div class="container">
 
         <div class="container d-flex justify-content-center align-items-center mt-5"> 
-            <h3>
+            <h2>
             Stock Report
-        </h3>
+        </h2>
     </div>
         <em> Stock Report Created at: <%=product.createdAt.toDateString()%> (<%= moment(product.createdAt).fromNow() %>)
                     <br>Stock Report (last) Updated/Commented at: <%=product.updatedAt.toDateString()%> (<%=
@@ -77,7 +77,7 @@
                                 <%=product.type%>
                             </td>
                             <td>
-                                <% if (product.uom_open==="vial/amp" ){%>
+                                <% if (product.uom_open==="vial/amp" || product.uom_open==="flacon/tube"){%>
                                     <%= product.qty_open%>
                                         <% } %>
                                             <% if (product.uom_open==="dose" ){%>
@@ -85,7 +85,7 @@
                                                     <% } %>
                             </td>
                             <td>
-                                <% if (product.uom_received==="vial/amp" ){%>
+                                <% if (product.uom_received==="vial/amp" || product.uom_received==="flacon/tube" ){%>
                                     <%= product.qty_received%>
                                         <% } %>
                                             <% if (product.uom_received==="dose" ){%>
@@ -93,7 +93,7 @@
                                                     <% } %>
                             </td>
                             <td>
-                                <% if (product.uom_issued==="vial/amp" ){%>
+                                <% if (product.uom_issued==="vial/amp" || product.uom_issued==="flacon/tube" ){%>
                                     <%= product.qty_issued%>
                                         <% } %>
                                             <% if (product.uom_issued==="dose" ){%>
@@ -109,7 +109,7 @@
 
 
                             <td>
-                                <% if (product.uom_count==="vial/amp" ){%>
+                                <% if (product.uom_count==="vial/amp"|| product.uom_count==="flacon/tube" ){%>
                                     <%= product.qty_count%>
                                         <% } %>
                                             <% if (product.uom_count==="dose" ){%>
@@ -124,17 +124,17 @@
                                 <%= product.so_days%>
                             </td>
                             <td>
-                                <% if (product.uom_received==="vial/amp" && product.uom_issued==="vial/amp" ) {%>
+                                <% if ((product.uom_received==="vial/amp" && product.uom_issued==="vial/amp") || (product.uom_issued==="flacon/tube" && product.uom_received==="flacon/tube") ) {%>
                                     <%=((product.qty_count / (
                                         product.qty_open+product.qty_received-product.qty_issued-product.qty_lost+product.qty_transferred
                                         ))*100).toFixed(1)%>% <% } %>
 
-                                            <% if (product.uom_received==="dose" && product.uom_issued==="vial/amp" ){%>
+                                            <% if (product.uom_received==="dose" && (product.uom_issued==="vial/amp" || product.uom_issued==="flacon/tube")){%>
                                                 <%=((product.qty_count / (
                                                     product.qty_open+(product.qty_received/product.conversion)-(product.qty_issued)-product.qty_lost+product.qty_transferred
                                                     ))*100).toFixed(1)%>% <% } %>
 
-                                                        <% if (product.uom_received==="vial/amp" &&
+                                                        <% if ((product.uom_received==="vial/amp" || product.uom_received==="flacon/tube") &&
                                                             product.uom_issued==="dose" ){%>
                                                             <%=((product.qty_count / (
                                                                 product.qty_open+(product.qty_received)-(product.qty_issued/product.conversion)-product.qty_lost+product.qty_transferred
