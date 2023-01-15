@@ -115,28 +115,27 @@
 
 
                                 <td><a href="/products/<%=product._id%>">
-                                        <% if (product.uom_received==="vial/amp" && product.uom_issued==="vial/amp" ) {%>
-                                            <%=((product.qty_count / (
-                                                product.qty_open+product.qty_received-product.qty_issued-product.qty_lost+product.qty_transferred
-                                                ))*100).toFixed(1)%>% <% } %>
-
-                                                    <% if (product.uom_received==="dose" && product.uom_issued==="vial/amp"
-                                                        ){%>
-                                                        <%=((product.qty_count / (
-                                                            product.qty_open+(product.qty_received/product.conversion)-(product.qty_issued)-product.qty_lost+product.qty_transferred
-                                                            ))*100).toFixed(1)%>% <% } %>
-
-                                                                <% if (product.uom_received==="vial/amp" &&
-                                                                    product.uom_issued==="dose" ){%>
-                                                                    <%=((product.qty_count / (
-                                                                        product.qty_open+(product.qty_received)-(product.qty_issued/product.conversion)-product.qty_lost+product.qty_transferred
-                                                                        ))*100).toFixed(1)%>% <% } %>
-
-                                                                            <% if (product.uom_received==="dose" &&
-                                                                                product.uom_issued==="dose" ){%>
-                                                                                <%=((product.qty_count / (
-                                                                                    product.qty_open+(product.qty_received/product.conversion)-(product.qty_issued/product.conversion)-product.qty_lost+product.qty_transferred
-                                                                                    ))*100).toFixed(1)%>% <% } %>
+                                    <% if ((product.uom_received==="vial/amp" && product.uom_issued==="vial/amp") || (product.uom_issued==="flacon/tube" && product.uom_received==="flacon/tube") ) {%>
+                                        <%=((product.qty_count / (
+                                            product.qty_open+product.qty_received-product.qty_issued-product.qty_lost+product.qty_transferred
+                                            ))*100).toFixed(1)%>% <% } %>
+    
+                                                <% if (product.uom_received==="dose" && (product.uom_issued==="vial/amp" || product.uom_issued==="flacon/tube")){%>
+                                                    <%=((product.qty_count / (
+                                                        product.qty_open+(product.qty_received/product.conversion)-(product.qty_issued)-product.qty_lost+product.qty_transferred
+                                                        ))*100).toFixed(1)%>% <% } %>
+    
+                                                            <% if ((product.uom_received==="vial/amp" || product.uom_received==="flacon/tube") &&
+                                                                product.uom_issued==="dose" ){%>
+                                                                <%=((product.qty_count / (
+                                                                    product.qty_open+(product.qty_received)-(product.qty_issued/product.conversion)-product.qty_lost+product.qty_transferred
+                                                                    ))*100).toFixed(1)%>% <% } %>
+    
+                                                                        <% if (product.uom_received==="dose" &&
+                                                                            product.uom_issued==="dose" ){%>
+                                                                            <%=((product.qty_count / (
+                                                                                product.qty_open+(product.qty_received/product.conversion)-(product.qty_issued/product.conversion)-product.qty_lost+product.qty_transferred
+                                                                                ))*100).toFixed(1)%>% <% } %>
                                     </a>
                                 </td>
                                 <td>
