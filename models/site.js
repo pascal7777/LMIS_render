@@ -33,6 +33,21 @@ const siteSchema = new Schema({
     country: {
         type: String
     },
+    catchment: {
+        type: Number
+    },
+    pregnancies: {
+        type: Number
+    },
+    newborns: {
+        type: Number
+    },
+    survInf: {
+        type: Number
+    },
+    epiTarget: {
+        type: Number
+    },
     parent_name: {
         type: String
     },
