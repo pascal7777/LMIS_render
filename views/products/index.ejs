@@ -35,7 +35,7 @@
                                 <li><a class="dropdown-item" href="./products?cat=ROTAVIRUS" role="button">Rotavirus</a></li>
                                 <li><a class="dropdown-item" href="./products?cat=TETANUS" role="button">Tetanus</a></li>
                                 <li><a class="dropdown-item" href="./products?cat=TYPHOID" role="button">Typhoid</a></li>
-                                <li><a class="dropdown-item" href="./products?cat=YELLOW FEVER" role="button">Yellow Fever</a></li>
+                                <li><a class="dropdown-item" href="./products?cat=YELLOWFEVER" role="button">Yellow Fever</a></li>
                                 <li><a class="dropdown-item" href="./products?cat=DILUENTS" role="button">Diluents</a></li>
                               <li><a class="dropdown-item" href="#">....</a></li>
                             </ul>
@@ -75,7 +75,7 @@
                             Months of Stock
                             </th>
                             <th>
-                            Storage temperature:
+                            Cold Chain Equipment
                             </th>
                             <th>
                             Stock out days  
@@ -160,7 +160,7 @@
                                             %)
                                 </td>
                                 <td>
-                                    <% if (product.uom_issued==="vial/amp" ) {%>
+                                    <% if (product.uom_issued==="vial/amp" || product.uom_received==="flacon/tube") {%>
                                         <% if ( (product.nearexp/product.qty_count)> 0.3 &&
                                             product.nearexp>product.qty_issued)
                                             {
