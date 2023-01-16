@@ -5,7 +5,7 @@
 
         <div class="container d-flex justify-content-center align-items-center mt-5">
 
-          <h4>New Stock Report</h4>  
+          <h2>New Stock Report</h2>  
         
         </div>
         
@@ -302,8 +302,18 @@
                         <option value="PILOT">
                     </datalist>
 <br>
-                    <label class="form-label" for="conversion" class="form-label">Nr Doses/unit</label>
-                    <input class="form-control" type="number" name="conversion" id="conversion" required>
+                    <label class="form-label" for="conversion" class="form-label">Nr Doses/pack (conversion)</label>
+                    <select class="form-select" type="number" name="conversion" id="conversion" required>
+                        <option selected>Select Nr Doses per packaging</option>
+                        <option value="1">1 dose</option>
+                        <option value="2">2 doses</option>
+                        <option value="4">4 doses</option>
+                        <option value="5">5 doses</option>
+                        <option value="10">10 doses</option>
+                        <option value="17">17 doses</option>
+                        <option value="20">20 doses</option>
+                        <option value="50">50 doses</option>
+                    </select>
                 </div>
             </div>
 
@@ -453,7 +463,7 @@
             <br>
             <div class="row">
                 <div class="col-md-3 offset-md-2">
-                    <label class="form-label" for="cce" class="form-label">Stock Stored in:
+                    <label class="form-label" for="cce" class="form-label">Cold Chain Equipment:
                         <p class="fs-6; fw-lighter" style=" margin-bottom :0em">(as per source label)</p>
                     </label>
                     <input class="form-control" list="SOH_cce" name="cce" id="cce" required>
