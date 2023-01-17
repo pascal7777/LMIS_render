@@ -47,11 +47,10 @@
             <br>
                         <div class="row">
                 <div class="col-md-6 offset-md-3">
-                    <label for="cat">Type</label>
+                    <label for="type">Type</label>
                     <select class="form-select" name="type" id="type">
                         <option value="ROUTINE" <%=product.type==='ROUTINE' ? 'selected' : '' %>>Routine</option>
-                        <option value="CAMPAIGN" <%=product.type==='CAMPAIGN' ? ' selected' : '' %>>Campaign
-                        </option>
+                        <option value="CAMPAIGN" <%=product.type==='CAMPAIGN' ? ' selected' : '' %>>Campaign</option>
                         <option value="OUTBREAK" <%=product.type==='OUTBREAK' ? 'selected' : '' %>>Outbreak</option>
                         <option value="PILOT" <%=product.type==='PILOT' ? 'selected' : '' %>>Pilot</option>
                     </select>
@@ -60,7 +59,7 @@
             <br>
                         <div class="row"> 
                 <div class="col-md-6 offset-md-3">
-                    <label for="cat">Vaccine Name</label>
+                    <label for="name">Vaccine Name</label>
                     <select class="form-select" name="name" id="name">
                             <option value="BCG - Ampoule (BCG Freeze Dried Glutamate vaccine)" <%product.name==='BCG - Ampoule (BCG Freeze Dried Glutamate vaccine)' ? 'selected' : ''  %>>BCG - Ampoule (BCG Freeze Dried Glutamate vaccine)</option>
                             <option value="BCG - Ampoule (BCG Vaccine)" <%product.name==='BCG - Ampoule (BCG Vaccine)' ? 'selected' : ''  %>>BCG - Ampoule (BCG Vaccine)</option>
@@ -246,7 +245,7 @@
             <br>
             <div class="row">
                 <div class="col-md-6 offset-md-3">
-                    <label for="cat">Manufacturer</label>
+                    <label for="manufacturer">Manufacturer</label>
                     <select class="form-select" name="manufacturer" id="manufacturer">
                             <option value="Abbott Biologicals BV" <%product.manufacturer==='Abbott Biologicals BV' ? 'selected' : ''  %>>Abbott Biologicals BV</option>
                             <option value="AJ Vaccines A/S" <%product.manufacturer==='AJ Vaccines A/S' ? 'selected' : ''  %>>AJ Vaccines A/S</option>
@@ -298,24 +297,24 @@
                 </div>
             </div>
 <br>
-        
-
             <div class="row">
                 <div class="col-md-6 offset-md-3">
-                    <label for="cat">Conversion (Nr of doses per pack)</label>
+                    <label for="conversion">Conversion (Nr of doses per pack)</label>
                     <select class="form-select" name="conversion" id="conversion">
-                        <option value="1" <%=product.conversion==='1' ? 'selected' : '' %>>1 dose per vial or flacon</option>
-                        <option value="2" <%=product.conversion==='2' ? 'selected' : '' %>>2 doses per vial or flacon</option>
-                        <option value="4" <%=product.conversion==='4' ? 'selected' : '' %>>4 doses per vial or flacon</option>
-                        <option value="5" <%=product.conversion==='5' ? 'selected' : '' %>>5 doses per vial or flacon</option>
-                        <option value="10" <%=product.conversion==='10' ? 'selected' : '' %>>10 doses per vial or flacon</option>
-                        <option value="17" <%=product.conversion==='17' ? 'selected' : '' %>>17 doses per vial or flacon</option>
-                        <option value="20" <%=product.conversion==='20' ? 'selected' : '' %>>20 doses per vial or flacon</option>
-                        <option value="50" <%=product.conversion==='50' ? 'selected' : '' %>>50 doses per vial or flacon</option>
+                        <option value=1 <%=product.conversion===1 ? 'selected' : '' %>>1 dose per vial or flacon</option>
+                        <option value=2 <%=product.conversion===2 ? 'selected' : '' %>>2 doses per vial or flacon</option>
+                        <option value=4 <%=product.conversion===4 ? 'selected' : '' %>>4 doses per vial or flacon</option>
+                        <option value=5 <%=product.conversion===5 ? 'selected' : '' %>>5 doses per vial or flacon</option>
+                        <option value=10 <%=product.conversion===10 ? 'selected' : '' %>>10 doses per vial or flacon</option>
+                        <option value=17 <%=product.conversion===17 ? 'selected' : '' %>>17 doses per vial or flacon</option>
+                        <option value=20 <%=product.conversion===20 ? 'selected' : '' %>>20 doses per vial or flacon</option>
+                        <option value=50 <%=product.conversion===50 ? 'selected' : '' %>>50 doses per vial or flacon</option>
                     </select>
                 </div>
             </div>
+
             <br>
+            
             <hr style=" border: 0;
             height: 2px;
             background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));">
@@ -340,7 +339,7 @@
                     <input type="number" id="qty_open" name="qty_open" value="<%=product.qty_open%>">
                 </div>
                 <div class="col-md-3 offset-md-2">
-                    <label for="cat">Pack unit</label>
+                    <label for="uom_open">Pack unit</label>
                     <select class="form-select" name="uom_open" id="uom_open">
                         <option value="vial/amp" <%=product.uom_open==='vial/amp' ? 'selected' : '' %>>Vial/Amp</option>
                         <option value= "flacon/tube" <%=product.uom_open==='flacon/tube' ? 'selected' : '' %>>Flacon/Tube</option>
@@ -360,7 +359,7 @@
                     <input type="number" id="qty_received" name="qty_received" value="<%=product.qty_received%>">
                 </div>
                 <div class="col-md-3 offset-md-2">
-                    <label for="cat">Pack unit</label>
+                    <label for="uom_received">Pack unit</label>
                     <select class="form-select" name="uom_received" id="uom_received">
                         <option value="vial/amp" <%=product.uom_received==='vial/amp' ? 'selected' : '' %>>Vial/Amp</option>
                         <option value= "flacon/tube" <%=product.uom_received==='flacon/tube' ? 'selected' : '' %>>Flacon/Tube</option>
@@ -377,7 +376,7 @@
                     <input type="number" id="qty_issued" name="qty_issued" value="<%=product.qty_issued%>">
                 </div>
                 <div class="col-md-3 offset-md-2">
-                    <label for="cat">Pack unit</label>
+                    <label for="uom_issued">Pack unit</label>
                     <select class="form-select" name="v" id="uom_issued">
                         <option value="vial/amp" <%=product.uom_issued==='vial/amp' ? 'selected' : '' %>>Vial/Amp</option>
                         <option value= "flacon/tube" <%=product.uom_issued==='flacon/tube' ? 'selected' : '' %>>Flacon/Tube</option>
@@ -394,7 +393,7 @@
                     <input type="number" id="qty_lost" name="qty_lost" value="<%=product.qty_lost%>">
                 </div>
                 <div class="col-md-3 offset-md-2">
-                    <label for="cat">Pack unit</label>
+                    <label for="uom_lost">Pack unit</label>
                     <select class="form-select" name="uom_lost" id="uom_lost">
                         <option value="vial/amp" <%=product.uom_lost==='vial/amp' ? 'selected' : '' %>>Vial/Amp</option>
                         <option value= "flacon/tube" <%=product.uom_lost==='flacon/tube' ? 'selected' : '' %>>Flacon/Tube</option>
@@ -411,7 +410,7 @@
                         value="<%=product.qty_transferred%>">
                 </div>
                 <div class="col-md-3 offset-md-2">
-                    <label for="cat">Pack unit</label>
+                    <label for="uom_transferred">Pack unit</label>
                     <select class="form-select" name="uom_transferred" id="uom_transferred">
                         <option value="vial/amp" <%=product.uom_transferred==='vial/amp' ? 'selected' : '' %>>Vial/Amp</option>
                         <option value= "flacon/tube" <%=product.uom_transferred==='flacon/tube' ? 'selected' : '' %>>Flacon/Tube</option>
@@ -429,7 +428,7 @@
                     <input type="number" id="qty_count" name="qty_count" value="<%=product.qty_count%>">
                 </div>
                 <div class="col-md-3 offset-md-2">
-                    <label for="cat">Pack unit</label>
+                    <label for="uom_count">Pack unit</label>
                     <select class="form-select" name="uom_count" id="uom_count">
                         <option value="vial/amp" <%=product.uom_count==='vial/amp' ? 'selected' : '' %>>Vial/Amp</option>
                         <option value= "flacon/tube" <%=product.uom_count==='flacon/tube' ? 'selected' : '' %>>Flacon/Tube</option>
@@ -440,7 +439,7 @@
             <br>
             <div class="row">
                 <div class="col-md-3 offset-md-2">
-                    <label for="cat">Cold Chain Equipment Used for Storage</label>
+                    <label for="cce">Cold Chain Equipment Used for Storage</label>
                     <select class="form-select" name="cce" id="cce">
                         <option value= "refrigerator" <%=product.cce==='refrigerator' ? 'selected' : '' %>>Refrigerator</option>
                         <option value= "freezer" <%=product.cce==='freezer' ? 'selected' : '' %>>Freezer</option>
