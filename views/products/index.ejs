@@ -139,16 +139,38 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <% if (product.uom_issued==="vial/amp" || product.uom_received==="flacon/tube") {%>
-                                        <%=((product.qty_count)
+
+
+                        
+
+                                    <% if ((product.uom_issued==="vial/amp" || product.uom_received==="flacon/tube") && ((product.qty_count)
+                                            /(product.qty_issued)*(((product.createdAt-product.date_open)/86400000)/30))<=1) {%>
+                                        
+                                        <span style="color:rgb(255, 17, 0)">    <%=((product.qty_count)
                                             /(product.qty_issued)*(((product.createdAt-product.date_open)/86400000)/30)).toFixed(1)
-                                            %>
+                                            %></span>
+
                                             <% } %>
-                                                <% if (product.uom_issued==="dose" ) {%>
+                                               
+                                            <% if ((product.uom_issued==="vial/amp" || product.uom_received==="flacon/tube") && ((product.qty_count)
+                                            /(product.qty_issued)*(((product.createdAt-product.date_open)/86400000)/30))>1) {%>
+                                        
+                                        <span style="color:rgb(22, 113, 4)">    <%=((product.qty_count)
+                                            /(product.qty_issued)*(((product.createdAt-product.date_open)/86400000)/30)).toFixed(1)
+                                            %></span>
+
+                                            <% } %>
+                                        
+
+
+
+                                            <% if (product.uom_issued==="dose" ) {%>
                                                     <%=((product.qty_count
                                                         /(product.qty_issued/product.conversion))*(((product.createdAt-product.date_open)/86400000)/30)).toFixed(1)
                                                         %>
                                                         <% } %>
+
+
                                 </td>
 
                                 <td>
@@ -165,7 +187,7 @@
                                             product.nearexp>product.qty_issued)
                                             {
                                             %>
-                                            <p>Yes</p>
+                                            <p> <span style="color:rgb(255, 17, 0)">Yes</span></p>
                                             <%} else { %>
                                                 <p>No</p>
                                                 <%}%>
@@ -175,7 +197,7 @@
                                                                 product.nearexp>(product.qty_issued/product.conversion))
                                                                 {
                                                                 %>
-                                                                <p>Yes</p>
+                                                                <p> <span style="color:rgb(255, 17, 0)">Yes</span></p>
                                                                 <%} else { %>
                                                                     <p>No</p>
                                                                     <%}%>
