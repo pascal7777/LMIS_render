@@ -46,14 +46,14 @@
 
                     
                 <div class="p-2 flex-grow-1 bd-highlight"><input type=" text" id="myInput3" onkeyup="myFunction()"
-                    style="width:10em; padding: 3px 4px 10px 12px" placeholder="Site Name ..."></div>
+                    style="width:10em; padding: 3px 4px 10px 12px" placeholder="Country ..."></div>
 </div>
 
         <div class="table-responsive">
                 <table class="table table-striped table-hover" ; id="vaccineTable">
                     <thead>
                         <tr>
-                            <th onclick="sortTable(1)">
+                            <th class="justify-content-center"; onclick="sortTable(1)">
                                 Country
                                 </th>
                             <th>
@@ -90,6 +90,9 @@
                             <th>
                             Near Expiry Risk
                             </th>
+                            <th>
+                                Comments (author)
+                                </th>
 
                         </tr>
                     </thead>
@@ -219,6 +222,14 @@
                                                                     <%}%>
                                                                         <% } %>
                                 </td>
+
+
+                                <td>
+
+                                    <%=product.comments.length %>   
+
+                                </td>
+
                         </tr>
                     </tbody>
                     <% }%>
