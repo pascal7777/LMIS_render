@@ -2,9 +2,8 @@
 
 <div class="container" >
             
-    
-   
-    
+  
+
         <br>
 
             <div class="d-flex bd-highlight">
@@ -14,8 +13,8 @@
 
                     <div class="p-2 flex-grow-1 bd-highlight">
                         <div class="dropdown">
-                            <button class="btn btn-warning btn-md dropdown-toggle" style="padding-bottom: 8px; padding-left: 8px; padding-right: 45px" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                             Filter Vaccine
+                            <button class="btn btn-warning btn-md dropdown-toggle" style="padding-bottom: 8px; padding-left: 15px; padding-right: 12px" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             Filter Vaccine Category
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="./products?cat=BCG" role="button">BCG</a></li>
@@ -42,11 +41,24 @@
                           </div>
                     </div>
 
-
-
+                    <!-- <div class="p-2 flex-grow-1 bd-highlight">
+                        <div class="dropdown">
+                            <button class="btn btn-warning btn-md dropdown-toggle" style="padding-bottom: 8px; padding-left: 8px; padding-right: 45px" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             Filter SC level
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./product.sites?sc_level=PR" role="button">PR</a></li>
+                                <li><a class="dropdown-item" href="./product.sites?sc_level=SN" role="button">SN</a></li>
+                                <li><a class="dropdown-item" href="./product.sites?sc_level=LD" role="button">LD</a></li>
+                                <li><a class="dropdown-item" href="./product.sites?sc_level=SP" role="button">SP</a></li>
+                            </ul>
+                          </div>
+                    </div> -->
                     
                 <div class="p-2 flex-grow-1 bd-highlight"><input type=" text" id="myInput3" onkeyup="myFunction()"
-                    style="width:10em; padding: 3px 4px 10px 12px" placeholder="Country ..."></div>
+                    style="width:10em; padding: 3px 4px 10px 12px" placeholder="Select Country ..."></div>
+                    <!-- <div class="p-2 flex-grow-1 bd-highlight"><input type=" text" id="myInput4" onkeyup="myFunction()"
+                        style="width:10em; padding: 3px 4px 10px 12px" placeholder="SC level"></div> -->
 </div>
 
         <div class="table-responsive">
@@ -54,8 +66,11 @@
                     <thead>
                         <tr>
                             <th class="justify-content-center"; onclick="sortTable(1)">
-                                Country
-                                </th>
+                            Country
+                            </th>
+                            <th>
+                            SC level
+                             </th>
                             <th>
                             Site
                             </th>
@@ -104,10 +119,14 @@
                                     <%= product.site.country %>
                                 </td>
                                 <td>
+                                    <%= product.site.sc_level %>
+                                </td>
+                                <td>
                                     <a href="/sites/<%= product.site._id %>">
                                         <%= product.site.site_name%>
                                     </a>
                                 </td>
+                              
                                 <td>
                                     <%= product.name %>
                                 </td>
@@ -281,6 +300,8 @@
             }
         }
     </script>
+
+
 
     <script>
         function sortTable(n) {
