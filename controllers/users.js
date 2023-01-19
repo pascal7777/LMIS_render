@@ -28,14 +28,16 @@ module.exports.createRegistration = async (req, res, next) => {
 }
 
 module.exports.renderLogin = (req, res) => {
+    if(req.query.returnTo){
+        req.session.returnTo = req.query.returnTo;
+    }
     res.render('users/login');
 }
 
 
 module.exports.makeLogin = (req, res) => {
     req.flash('success', 'welcome back!');
-    const redirectUrl = req.session.returnTo || '/sites';
-    delete req.session.returnTo;
+    const redirectUrl = res.locals.returnTo || '/sites';
     res.redirect(redirectUrl);
 }
 
