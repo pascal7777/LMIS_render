@@ -87,23 +87,37 @@
 <br>
 <hr style=" width:100%; height: 10px; border: 0; box-shadow: 0 10px 10px -10px rgb(51, 51, 52) inset;">
 
-                <h4>Vaccine Stock reports
-                    (Total Nr: <%=site.products.length%>)
-                </h4>
+                
                 <div class="container text-left">
                     <div class="row">
                         <div class="col">
-                          <p><em><span style="color:rgb(196, 192, 192)">Ideally there are 12 reports per year covering a full month period for each routine vaccine in stock (back to back). 
-                                Vaccine stock levels for campaigns and pilots may differ month to month.</span></em></p>  
+                          <!-- <p><em><span style="color:rgb(196, 192, 192)">Ideally there are 12 reports per year covering a full month period for each routine vaccine in stock (back to back). 
+                                Vaccine stock levels for campaigns and pilots may differ month to month.</span></em></p>   -->
                         </div>
+
+
                         <div class="col-md-auto">
                             <p style="margin-left: auto">
-                                <a href="/sites/<%=site._id%>/products/new">Add a new Stock Report</a>
+                            <% if(currentUser){%>
+                                <p> <a href="/sites/<%=site._id%>/products/new" class="p-2 flex-grow-1 bd-highlight">Add a New Stock Report</a>
+                                <% } else { %>
+                                    <a href="/login?returnTo=/sites/<%=site._id%>/products/new" class="p-2 flex-grow-1 bd-highlight">Add a New Stock Report</a>
+                                <%}%></p>
                             </p>
+                        
+                        
+                        
+                    
                         </div>
                     </div>
                 </div>
+                  
+               
 
+                <h4>Vaccine Stock reports
+                    (Total Nr: <%=site.products.length%>)
+                </h4>
+       
                 
 <br>
 
@@ -165,7 +179,7 @@
                                             <% if (product.date_open.getMonth()===0) {%>
                                                 <% if (product.cat==="BCG" ) {%>
                                                     <a href="/products/<%=product.id%>">
-                                                        <%=product.name%>
+                                                        <%=product.name%>  
                                                     </a>
                                                     <div>
                                                         From: <%=product.date_open.toDateString() %>
@@ -31915,9 +31929,7 @@
 
                 <p><em><span style="color:rgb(196, 192, 192)">Vaccine name links to the specific stock report details for that month in this site. </span></em>  </p>
                 <br>
-                <p>
-                    <a href="/sites/<%=site._id%>/products/new">Add a new Stock Report</a>
-                </p>
+              
                 <p>
                     <a href="/sites">Back to Sites Index</a>
                 </p>
