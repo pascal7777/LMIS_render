@@ -77,3 +77,10 @@ module.exports.isCommentAuthor = async (req, res, next) => {
         res.redirect(`/products/${id}`);
     }
 }
+
+module.exports.checkReturnTo = (req, res, next) => {
+    if (req.session.returnTo) {
+        res.locals.returnTo = req.session.returnTo;
+    }
+    next();
+    }
