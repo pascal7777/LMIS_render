@@ -1,9 +1,7 @@
 <% layout ('/layouts/boilerplate') %>
 
 <div class="container" >
-            
-  
-
+        
         <br>
 
             <div class="d-flex bd-highlight">
@@ -62,18 +60,18 @@
 </div>
 
         <div class="table-responsive">
-                <table class="table table-striped table-hover" ; id="vaccineTable">
+                <table class="table table-striped table-hover"; id="vaccineTable">
                     <thead>
                         <tr>
                             <th class="justify-content-center"; onclick="sortTable(1)">
                             Country
                             </th>
                             <th>
-                            SC level
-                             </th>
-                            <th>
                             Site
                             </th>
+                            <th>
+                                SC level
+                                 </th>
                             <th>
                             Vaccine
                             </th>
@@ -90,7 +88,7 @@
                             Days
                             </th>
                             <th>
-                            Stock Reconciliation
+                            Stock Recon
                             </th>
                             <th>
                             Months of Stock
@@ -99,14 +97,14 @@
                             Cold Chain Equipment
                             </th>
                             <th>
-                            Stock out days  
+                            Stockout days  
                             <!-- (if high like > 3 days it should be accounted for in MoS calcul) -->
                             </th>
                             <th>
                             Near Expiry Risk
                             </th>
                             <th>
-                                Comments (author)
+                                Comment(s)
                                 </th>
 
                         </tr>
@@ -118,15 +116,15 @@
                                 <td>
                                     <%= product.site.country %>
                                 </td>
-                                <td>
-                                    <%= product.site.sc_level %>
-                                </td>
+                              
                                 <td>
                                     <a href="/sites/<%= product.site._id %>">
                                         <%= product.site.site_name%>
                                     </a>
                                 </td>
-                              
+                                <td>
+                                    <%= product.site.sc_level %>
+                                </td>
                                 <td>
                                     <%= product.name %>
                                 </td>
@@ -134,10 +132,10 @@
                                     <%= product.type %>
                                 </td>
                                 <td>
-                                    <%=(product.date_open.getMonth()+1)%>/<%=product.date_open.getFullYear()%>
+                                    <%=(product.date_open.toLocaleString('en-US',{month:'short'}))%>/<%=product.date_open.getFullYear()%>
                                 </td>
                                 <td>
-                                    <%=(product.createdAt.getMonth()+1)%>/<%=product.createdAt.getFullYear() %>
+                                    <%=(product.createdAt.toLocaleString('en-US',{month:'short'}))%>/<%=product.createdAt.getFullYear() %>
                                 </td>
                                 <td>
                                     <%=((product.createdAt- product.date_open)/86400000).toFixed(0) %>
@@ -215,10 +213,7 @@
                                     <%=product.cce %> 
                                 </td>
                                 <td>
-                                    <%=product.so_days %> ( <%=(product.so_days
-                                            /((product.createdAt-product.date_open)/86400000)*100).toFixed(0)%>
-                                            %)
-                                </td>
+                                    <%=product.so_days %> <br>
                                 <td>
                                     <% if (product.uom_issued==="vial/amp" || product.uom_received==="flacon/tube") {%>
                                         <% if ( (product.nearexp/product.qty_count)> 0.3 &&
@@ -359,3 +354,8 @@
             }
         }
     </script>
+
+
+
+
+   
