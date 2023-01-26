@@ -61,8 +61,11 @@ module.exports.putProduct = async (req, res) => {
 
 
 module.exports.deleteProduct = async (req, res) => {
-    const { id } = req.params;
-    const deletedProduct = await Product.findByIdAndDelete(id);
-    req.flash('success', 'Stock report (and comments) succesfully deleted');
+    const {id} = req.params
+    const product = await Product.findByIdAndDelete(id);
+    for (let image of product.images) {
+      await cloudinary.uploader.destroy(image.filename);
+    } 
+    req.flash('success', 'Stock report (and associated images) deleted');
     res.redirect('/products');
-}
+  }
